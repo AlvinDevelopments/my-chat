@@ -3,17 +3,53 @@
   <head>
     <title>Socket.IO chat</title>
     <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   </head>
   <body>
-    <ul id="messages"></ul>
-    <form action="">
-      <input id="m" autocomplete="off" /><button>Send</button>
-    </form>
-    <script
-       src="https://code.jquery.com/jquery-3.1.1.min.js"
-       integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-       crossorigin="anonymous"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/client.js"></script>
-  </body>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body id="whole">
+
+  <header id="head">
+    Socket.IO Chat
+  </header>
+
+  <section class="section">
+    <div id="chat" class="container">
+
+      <div class="columns">
+
+        <div class="column" id="msging">
+          <ul id="messages"></ul>
+        </div>
+
+        <div class="column">
+          <div class="col2">
+          Online Users
+          <div id='userList'></div>
+          </div>
+        </div>
+
+      </div>
+
+      <form class="message" id="message" action="">
+        <input id="m" autocomplete="off" />
+        <button>Send</button>
+      </form>
+
+
+    </div>
+
+  </section>
+
+  <script
+    src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+    crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/client.js"></script>
+</body>
 </html>
